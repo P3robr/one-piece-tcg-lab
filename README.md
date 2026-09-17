@@ -14,6 +14,7 @@ O projeto reúne catálogo de cartas, regras de construção, rotação, estatí
 - [Início rápido com Codex](#início-rápido-com-codex)
 - [Instalação e uso pelo terminal](#instalação-e-uso-pelo-terminal)
 - [Como analisar seu próprio deck](#como-analisar-seu-próprio-deck)
+- [Como pedir melhoria do deck](#como-pedir-melhoria-do-deck)
 - [Como usar com ChatGPT ou NotebookLM](#como-usar-com-chatgpt-ou-notebooklm)
 - [Como compartilhar com outra pessoa](#como-compartilhar-com-outra-pessoa)
 - [Comandos disponíveis](#comandos-disponíveis)
@@ -182,6 +183,47 @@ python -m optcg_lab analyze data/lab.db examples/meu_deck.txt
 python -m optcg_lab recommend data/lab.db examples/meu_deck.txt Standard --date 2026-09-17
 python -m optcg_lab context data/lab.db examples/meu_deck.txt Standard outputs/meu_contexto.md --date 2026-09-17 --opponent OP17-039
 ```
+
+## Como pedir melhoria do deck
+
+No Codex, uma frase basta:
+
+> Melhore `examples/meu_deck.txt` para Standard EN. Quero mais consistência geral. Faça mudanças mínimas, entregue entradas e saídas, gere a lista final completa com 50 cartas, valide novamente e crie um plano de 20 partidas para comparar com a versão atual.
+
+Para um matchup específico:
+
+> Melhore `examples/meu_deck.txt` contra `OP17-039 Rocks.D.Xebec`. Preserve o núcleo do líder. Use dados de matchup somente quando a fonte e a amostra estiverem claras. Entregue lista OPTCGSim completa e legal.
+
+Para explorar opções:
+
+> Crie três melhorias para `examples/meu_deck.txt`: conservadora, anti-meta e experimental. Em cada versão, mostre entradas, saídas, métricas antes/depois, riscos e hipótese de teste. Não invente aumento de win rate.
+
+O fluxo obrigatório do agente é:
+
+1. validar lista original;
+2. analisar curva, counter, traits, keywords e cartas mortas;
+3. procurar candidatos no catálogo legal completo;
+4. consultar uso e matchup quando houver dados;
+5. explicar problemas concretos;
+6. propor trocas com entradas e saídas equivalentes;
+7. gerar deck final completo;
+8. validar versão proposta;
+9. comparar métricas;
+10. criar plano de testes.
+
+Você pode acrescentar restrições:
+
+- cartas que já possui;
+- orçamento;
+- estilo agressivo, controle ou midrange;
+- preferência por ir primeiro ou segundo;
+- decks mais comuns na loja;
+- cartas que deseja manter;
+- quantidade máxima de mudanças.
+
+Sem essas informações, o agente usa consistência geral, catálogo completo e mudanças mínimas como padrão. Preço e disponibilidade física ficam marcados como não avaliados.
+
+Um modelo reutilizável está em [`prompts/improve_deck.md`](prompts/improve_deck.md).
 
 ## Como usar com ChatGPT ou NotebookLM
 

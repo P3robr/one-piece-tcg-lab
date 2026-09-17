@@ -1,0 +1,10 @@
+{
+  "matchups": [
+    {"source_name": "Straw Hat Stats", "captured_at": "2026-09-14", "environment": "simulator", "format_name": "OP17", "leader_a": "OP17-001", "leader_b": "OP14-020", "games": 1229, "wins_a": 570, "source_url": "https://strawhatstats.com/leaders/OP17-001", "notes": "Dracule Mihawk; aggregate shown by source."},
+    {"source_name": "Straw Hat Stats", "captured_at": "2026-09-14", "environment": "simulator", "format_name": "OP17", "leader_a": "OP17-001", "leader_b": "OP13-004", "games": 1065, "wins_a": 633, "source_url": "https://strawhatstats.com/leaders/OP17-001", "notes": "Sabo red/black; aggregate shown by source."},
+    {"source_name": "Straw Hat Stats", "captured_at": "2026-09-14", "environment": "simulator", "format_name": "OP17", "leader_a": "OP17-001", "leader_b": "OP17-058", "games": 748, "wins_a": 230, "source_url": "https://strawhatstats.com/leaders/OP17-001", "notes": "Kaido; aggregate shown by source."},
+    {"source_name": "Straw Hat Stats", "captured_at": "2026-09-14", "environment": "simulator", "format_name": "OP17", "leader_a": "OP17-001", "leader_b": "OP17-039", "games": 722, "wins_a": 173, "source_url": "https://strawhatstats.com/leaders/OP17-001", "notes": "Rocks.D.Xebec; aggregate shown by source."},
+    {"source_name": "Straw Hat Stats", "captured_at": "2026-09-14", "environment": "simulator", "format_name": "OP17", "leader_a": "OP17-001", "leader_b": "OP09-062", "games": 719, "wins_a": 228, "source_url": "https://strawhatstats.com/leaders/OP17-001", "notes": "Nico Robin; aggregate shown by source."},
+    {"source_name": "Straw Hat Stats", "captured_at": "2026-09-14", "environment": "simulator", "format_name": "OP17", "leader_a": "OP17-001", "leader_b": "OP16-001", "games": 551, "wins_a": 306, "source_url": "https://strawhatstats.com/leaders/OP17-001", "notes": "Portgas.D.Ace red; aggregate shown by source."}
+  ]
+}
